@@ -35,14 +35,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-
-      - name: Copy to server
-        uses: appleboy/scp-action@master
-        env:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSHKEY }}
+      - name: Publish
+        uses: nogsantos/scp-deploy@master
         with:
-          source: "deploy_dist"
-          target: "/var/www/cyberpunk"
+          src: ./deploy_dist/*
+          host: ${{ secrets.HOST }}
+          remote: ${{ secrets.DIR }}
+          port: ${{ secrets.PORT }}
+          user: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY }}
