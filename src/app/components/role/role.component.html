@@ -1,15 +1,23 @@
 <p>
-    <mat-form-field appearance="outline">
-        <mat-label>Character Name</mat-label>
-        <input style="color: white" matInput [(ngModel)]="characterName">
-    </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Character Name</mat-label>
+    <input style="color: white"
+           matInput
+           [(ngModel)]="characterName"
+           required>
+  </mat-form-field>
 </p>
 <p>
-    <mat-form-field appearance="outline">
-        <mat-label>Role</mat-label>
-        <mat-select [(value)]="selectedRole">
-            <mat-option *ngFor="let role of roles" [value]="role">{{role.name}}</mat-option>
-        </mat-select>
-        <mat-hint>{{selectedRole.description}}</mat-hint>
-    </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Role</mat-label>
+    <mat-select [(value)]="selectedRole">
+      <mat-option *ngFor="let role of roles"
+                  [value]="role">{{role.name}}</mat-option>
+    </mat-select>
+    <mat-hint>{{selectedRole.description}}</mat-hint>
+  </mat-form-field>
+</p>
+<p class="role-ability">
+  Role ability:
+  {{selectedRole.roleAbility}}
 </p>

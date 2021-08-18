@@ -1,4 +1,8 @@
-<mat-stepper #stepper style="height: 100%">
+<div class="header">Cyberpunk Character Creator</div>
+<mat-stepper #stepper
+             class="stepper"
+             [linear]="true"
+             [orientation]="(stepperOrientation | async)!">
   <mat-step>
     <ng-template matStepLabel>Pick a Role</ng-template>
     <crcc-role></crcc-role>

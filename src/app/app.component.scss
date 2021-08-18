@@ -1,0 +1,14 @@
+.header {
+  color: #f44336;
+  background-color: black;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stepper {
+  height: calc(100% - 50px);
+}
