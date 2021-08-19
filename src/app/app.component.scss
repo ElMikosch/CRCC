@@ -9,6 +9,8 @@
   align-items: center;
 }
 
-.stepper {
-  height: calc(100% - 50px);
+@media only screen and (min-width: 1100px){
+  .stepper {
+    height: calc(100% - 50px);
+  }
 }

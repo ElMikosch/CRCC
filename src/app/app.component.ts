@@ -16,7 +16,7 @@ export class AppComponent {
   stepperOrientation: Observable<StepperOrientation>;
 
   constructor(breakpointObserver: BreakpointObserver) {
-    this.stepperOrientation = breakpointObserver.observe('(min-width: 800px)')
+    this.stepperOrientation = breakpointObserver.observe('(min-width: 1100px)')
       .pipe(map(({ matches }) => matches ? 'horizontal' : 'vertical'));
 
   }

@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { RoleComponent } from './components/role/role.component';
 import { StatsComponent } from './components/stats/stats.component';
-
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 
 
@@ -32,7 +32,8 @@ import { StatsComponent } from './components/stats/stats.component';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgxExtendedPdfViewerModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
