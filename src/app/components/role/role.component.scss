@@ -1,0 +1,16 @@
+.pdf-container {
+  margin-top: 50px;
+}
+
+:host ::ng-deep .ng2-pdf-viewer-container {
+  height: 100px !important;
+}
+
+@media only screen and (min-width: 1100px){
+  .container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 90%;
+  }
+}

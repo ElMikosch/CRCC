@@ -1,5 +1,6 @@
 export interface Role {
-    name: string;
-    description: string;
-    classAbility: string;
+  name: string;
+  description: string;
+  roleAbility: string;
+  roleInfoFile: string;
 }
