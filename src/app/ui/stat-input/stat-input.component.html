@@ -1,0 +1,15 @@
+<div class="stat-input-container">
+    <div class="stat-input-label">
+        {{stat.shortName}}
+    </div>
+    <button mat-mini-fab color="primary" (click)="subtract()" [disabled]="stat.isDerived || minimumReached">
+        <mat-icon>remove</mat-icon>
+    </button>
+    <div class="stat-input-value">
+        {{this.stat.value}}
+    </div>
+    <button mat-mini-fab color="primary" (click)="add()"
+        [disabled]="stat.isDerived || maximumReached || allStatMaximumReached">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

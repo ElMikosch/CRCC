@@ -1,7 +1,9 @@
 export interface Stat {
     name: string;
+    name_DE: string;
     shortName: string;
     description: string;
+    description_DE: string;
     value: number;
     isDerived: boolean;
     minValue: number;

@@ -328,3 +328,8 @@ export function getAllGeneralLifePathOptions(): LifePathOption[]{
         },
     ];
 }
+
+export function getLifePathOptionForType(type: LifePathOptionType): LifePathOption{
+    let allOptions = getAllGeneralLifePathOptions();
+    return allOptions.filter(x => x.type === type)[0];
+}

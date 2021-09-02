@@ -12,6 +12,10 @@ import { AppComponent } from './app.component';
 import { RoleComponent } from './components/role/role.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { LifePathComponent } from './components/life-path/life-path.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { StatInputComponent } from './ui/stat-input/stat-input.component';
 
 
 
@@ -20,7 +24,9 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
   declarations: [
     AppComponent,
     StatsComponent,
-    RoleComponent
+    RoleComponent,
+    LifePathComponent,
+    StatInputComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +39,8 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
     MatSelectModule,
     MatInputModule,
     MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
     NgxExtendedPdfViewerModule 
   ],
   providers: [],

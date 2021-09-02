@@ -1,15 +1,13 @@
 <div class="header">Cyberpunk Character Creator</div>
-<mat-stepper #stepper
-             class="stepper"
-             [linear]="true"
-             [orientation]="(stepperOrientation | async)!">
-  <mat-step>
+<mat-stepper #stepper class="stepper" [orientation]="(stepperOrientation | async)!">
+  <!-- <mat-step>
     <ng-template matStepLabel>Pick a Role</ng-template>
     <crcc-role></crcc-role>
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>Run Your Lifepath</ng-template>
-  </mat-step>
+    <crcc-life-path></crcc-life-path>
+  </mat-step> -->
   <mat-step>
     <ng-template matStepLabel>Build Your STATS</ng-template>
     <crcc-stats></crcc-stats>

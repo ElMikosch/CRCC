@@ -1,1 +1,7 @@
-<p>stats works!</p>
+<div>Used Points: {{spendPoints}}</div>
+<div>Remaining Points: {{remainingPoints}}</div>
+
+<div *ngFor="let stat of allStats">
+    <app-stat-input style="padding: 15px" [stat]="stat" [allStatMaximumReached]="maximumReached">
+    </app-stat-input>
+</div>
