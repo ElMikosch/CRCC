@@ -16,9 +16,8 @@ import { LifePathComponent } from './components/life-path/life-path.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { StatInputComponent } from './ui/stat-input/stat-input.component';
-
-
-
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -41,7 +40,9 @@ import { StatInputComponent } from './ui/stat-input/stat-input.component';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    NgxExtendedPdfViewerModule 
+    NgxExtendedPdfViewerModule,
+    MatExpansionModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

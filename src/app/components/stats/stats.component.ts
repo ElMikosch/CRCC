@@ -54,9 +54,5 @@ export class StatsComponent implements OnInit {
     if (currentHUM && currentEMP) {
       currentHUM.value = currentHUM.derivedCalculation(currentEMP.value);
     }
-
-    // this.playerData.stats$.next(stats);
-
   }
-
 }

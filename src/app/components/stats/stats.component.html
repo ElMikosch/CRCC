@@ -1,7 +1,19 @@
-<div>Used Points: {{spendPoints}}</div>
-<div>Remaining Points: {{remainingPoints}}</div>
+<mat-accordion>
+    <div *ngFor="let stat of allStats">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{stat.name}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>{{stat.description}}</div>
+            <app-stat-input style="padding: 15px" [stat]="stat" [allStatMaximumReached]="maximumReached">
+            </app-stat-input>
+        </mat-expansion-panel>
+    </div>
+</mat-accordion>
 
-<div *ngFor="let stat of allStats">
-    <app-stat-input style="padding: 15px" [stat]="stat" [allStatMaximumReached]="maximumReached">
-    </app-stat-input>
+<div class="status-footer">
+    <div>Used Points: {{spendPoints}}</div>
+    <div>Remaining Points: {{remainingPoints}}</div>
 </div>

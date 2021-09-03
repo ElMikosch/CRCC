@@ -1,13 +1,30 @@
 <div class="header">Cyberpunk Character Creator</div>
-<mat-stepper #stepper class="stepper" [orientation]="(stepperOrientation | async)!">
-  <!-- <mat-step>
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Pick a Role">
+    <crcc-role></crcc-role>
+  </mat-tab>
+  <mat-tab label="Run Your Lifepath">
+    Run Your Lifepath
+  </mat-tab>
+  <mat-tab label="Build Your STATS">
+    <crcc-stats></crcc-stats>
+  </mat-tab>
+  <mat-tab label="Set Your SKILLS">
+    Set Your SKILLS
+  </mat-tab>
+  <mat-tab label="Buy Your Stuff">
+    Buy your Stuff
+  </mat-tab>
+</mat-tab-group>
+<!-- <mat-stepper #stepper class="stepper" [orientation]="(stepperOrientation | async)!">
+  <mat-step>
     <ng-template matStepLabel>Pick a Role</ng-template>
     <crcc-role></crcc-role>
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>Run Your Lifepath</ng-template>
     <crcc-life-path></crcc-life-path>
-  </mat-step> -->
+  </mat-step>
   <mat-step>
     <ng-template matStepLabel>Build Your STATS</ng-template>
     <crcc-stats></crcc-stats>
@@ -18,4 +35,4 @@
   <mat-step>
     <ng-template matStepLabel>Buy Your Stuff</ng-template>
   </mat-step>
-</mat-stepper>
+</mat-stepper> -->

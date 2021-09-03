@@ -20,9 +20,6 @@ export class StatInputComponent implements OnInit {
 
   ngOnInit(): void {
     this.stat.value = this.stat.minValue;
-
-    if (this.stat.isDerived) {
-    }
   }
 
   add() {
