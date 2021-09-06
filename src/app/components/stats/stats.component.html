@@ -3,11 +3,12 @@
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    {{stat.name}}
+                    {{stat.name}} / {{stat.name_DE}}
                 </mat-panel-title>
             </mat-expansion-panel-header>
-            <div>{{stat.description}}</div>
-            <app-stat-input style="padding: 15px" [stat]="stat" [allStatMaximumReached]="maximumReached">
+            <div style="margin-bottom: 10px;">{{stat.description}}</div>
+            <div>{{stat.description_DE}}</div>
+            <app-stat-input style="padding: 15px" [stat]="stat">
             </app-stat-input>
         </mat-expansion-panel>
     </div>

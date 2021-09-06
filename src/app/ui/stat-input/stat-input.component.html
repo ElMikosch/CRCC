@@ -2,14 +2,14 @@
     <div class="stat-input-label">
         {{stat.shortName}}
     </div>
-    <button mat-mini-fab color="primary" (click)="subtract()" [disabled]="stat.isDerived || minimumReached">
+    <button mat-mini-fab color="primary" (click)="subtract()" *ngIf="!stat.isDerived" [disabled]="minimumReached">
         <mat-icon>remove</mat-icon>
     </button>
     <div class="stat-input-value">
-        {{this.stat.value}}
+        {{stat.value}}
     </div>
-    <button mat-mini-fab color="primary" (click)="add()"
-        [disabled]="stat.isDerived || maximumReached || allStatMaximumReached">
+    <button mat-mini-fab color="primary" (click)="add()" *ngIf="!stat.isDerived"
+        [disabled]="maximumReached || allStatMaximumReached">
         <mat-icon>add</mat-icon>
     </button>
 </div>

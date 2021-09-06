@@ -1,0 +1,32 @@
+<mat-accordion>
+    <div *ngFor="let skillCategory of skillCategories">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{skillCategory.Name_EN}} / {{skillCategory.Name_DE}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngFor="let skill of skillCategory.Skills">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{skill.Name_EN}} / {{skill.Name_DE}}
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <app-skill-input style="padding: 15px" [skill]="skill">
+                        </app-skill-input>
+                        <div style="margin-bottom: 10px;">{{skill.Description_EN}}</div>
+                        <div>{{skill.Description_DE}}</div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </mat-expansion-panel>
+    </div>
+</mat-accordion>
+
+
+<!-- <div class="status-footer">
+    <div>Used Points: {{spendPoints}}</div>
+    <div>Remaining Points: {{remainingPoints}}</div>
+</div> -->
