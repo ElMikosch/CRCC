@@ -6,6 +6,7 @@ export interface Skill {
     Description_DE: string;
     Stat: string;
     Value?: number;
+    Minimum?: number;
 }
 
 export interface SkillCategory {
@@ -26,7 +27,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Konzentration",
                     "Description_EN": "Skill of focus and mental control, encompassing feats of memory, recall, and physiological control. At a Base 10, you've got a pretty solid memory and can keep your head in a firefight against the local boosters. At a Base 14, you've trained your mind to retain knowledge, and probably meditate regularly. It takes a fair amount to shake you. At a Base 18, your mind is like a steel trap with a 24/7 lock down. You can walk through gunfire and never flinch.",
                     "Description_DE": "Fähigkeit der Konzentration und mentalen Kontrolle, die Gedächtnisleistungen, Erinnerungsvermögen und physiologische Kontrolle umfasst. Mit einem Basiswert von 10 hast du ein ziemlich gutes Gedächtnis und kannst dich in einem Feuergefecht mit den örtlichen Angebern behaupten. Bei einem Basiswert von 14 haben Sie Ihren Verstand darauf trainiert, Wissen zu behalten, und meditieren wahrscheinlich regelmäßig. Es braucht schon einiges, um dich zu erschüttern. Bei einer Base 18 ist Ihr Verstand wie eine Stahlfalle, die rund um die Uhr verschlossen ist. Sie können durch Schüsse hindurchgehen, ohne mit der Wimper zu zucken.",
-                    "Stat": "WILL"
+                    "Stat": "WILL",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -50,7 +52,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Wahrnehmung",
                     "Description_EN": "Skill of spotting hidden things, like clues, traps, and people using the Stealth Skill, but not objects hidden with the Conceal/Reveal Object Skill. At a Base 10, you know how to keep an eye out and your spatial awareness is better than the average person. At a Base 14, you always know roughly what's going on around you and only trained professionals can sneak up on you. At a Base 18, you are trained to scan rooms for traps, you can spot tiny clues like scratches on door knobs, and you can predict who is entering a room by how they turn that knob.",
                     "Description_DE": "Fähigkeit, verborgene Dinge wie Hinweise, Fallen und Personen mit der Fertigkeit \"Schleichen\" zu entdecken, nicht aber Objekte, die mit der Fertigkeit \"Objekt verbergen/verstecken\" versteckt werden. Mit einem Basiswert von 10 weißt du, wie du die Augen offen halten kannst, und dein räumliches Vorstellungsvermögen ist besser als das eines Durchschnittsmenschen. Mit Basis 14 weißt du immer ungefähr, was um dich herum vor sich geht, und nur ausgebildete Profis können sich an dich heranschleichen. Bei einer Base 18 sind Sie darauf trainiert, Räume nach Fallen abzusuchen, Sie erkennen winzige Hinweise wie Kratzer auf Türklinken und können anhand der Art und Weise, wie sie die Klinke drehen, vorhersagen, wer einen Raum betritt.",
-                    "Stat": "INT"
+                    "Stat": "INT",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -72,7 +75,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Leichtathletik",
                     "Description_EN": "Skill of jumping, climbing, throwing, swimming, lifting weights, etc. It combines the basic elements of any high school-level sports program. This Skill also covers thrown weapons. At a Base 10, you are the equivalent of a real high school \"jock,\" able to run long distances and lift a respectable amount. At a Base 14, you can perform in college-level competitions and hold your own in all sorts of athletic challenges. At a Base 18, you are of Olympic or professional caliber and it's rare you meet someone who matches your skill.",
                     "Description_DE": "Springen, Klettern, Werfen, Schwimmen, Gewichte heben, usw. Sie vereint die grundlegenden Elemente eines jeden Sportprogramms auf Highschool-Niveau. Diese Fertigkeit umfasst auch das Werfen von Waffen. Mit Base 10 bist du das Äquivalent eines echten Highschool-Sportlers, kannst lange Strecken laufen und eine respektable Menge heben. Mit einem Basiswert von 14 kannst du an Wettkämpfen auf College-Niveau teilnehmen und dich in allen Arten von sportlichen Herausforderungen behaupten. Mit einem Base 18 sind Sie olympisches oder professionelles Kaliber und es ist selten, dass Sie jemanden treffen, der Ihren Fähigkeiten entspricht.",
-                    "Stat": "DEX"
+                    "Stat": "DEX",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -112,7 +116,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Stealth",
                     "Description_EN": "Skill of moving quietly, hiding, doing an action discreetly, or otherwise evading detection. Other Characters can try to find you with their Perception Skill. At a Base 10, you can get past most guards, or your parents if you've been grounded. At a Base 14, you are good enough to slip smoothly from shadow to shadow and not make any noise. You can avoid guards and lose pursuers easily. At a Base 18, you are the equal of the corporate ninja employed by Arasaka. If you want to go unnoticed, there are few people who can spot you.",
                     "Description_DE": "Die Fähigkeit, sich leise zu bewegen, sich zu verstecken, eine Aktion diskret auszuführen oder sich auf andere Weise der Entdeckung zu entziehen. Andere Charaktere können versuchen, dich mit ihrer Wahrnehmungsfertigkeit zu finden. Mit einem Basiswert von 10 kannst du an den meisten Wachen oder deinen Eltern vorbeikommen, wenn du Hausarrest hattest. Mit Basis 14 bist du gut genug, um von Schatten zu Schatten zu schlüpfen und kein Geräusch zu machen. Du kannst Wachen ausweichen und Verfolger leicht abhängen. Mit einem Basiswert von 18 bist du den von Arasaka beschäftigten Firmen-Ninjas ebenbürtig. Wenn du unbemerkt bleiben willst, gibt es nur wenige Leute, die dich sehen können.",
-                    "Stat": "DEX"
+                    "Stat": "DEX",
+                    "Minimum": 2
                 }
             ]
         },
@@ -164,7 +169,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Buchhaltung",
                     "Description_EN": "Skill of balancing books, creating false books, and identifying them, juggling numbers, creating budgets and handling day-to-day business operations. At a Base 10, you can manage the books for a small company by yourself and rarely make any clerical errors. At a Base 14, you can manage the books for a medium-sized Corp and hide your embezzlement at the same time. At a Base 18, you're a master at double entry and offshore accounting that would make the best white collar criminals proud. You'll probably be sought out by a Corp or a Crime Family to help them with their operations.",
                     "Description_DE": "Fähigkeit, Bücher auszugleichen, falsche Bücher zu erstellen und sie zu identifizieren, mit Zahlen zu jonglieren, Budgets zu erstellen und das Tagesgeschäft zu bewältigen. Mit einem Basiswert von 10 können Sie die Bücher eines kleinen Unternehmens selbst führen und machen nur selten Schreibfehler. Mit Base 14 können Sie die Bücher eines mittelgroßen Unternehmens führen und gleichzeitig Ihre Veruntreuungen verbergen. Mit Base 18 sind Sie ein Meister der doppelten Buchführung und der Offshore-Buchhaltung, der die besten Wirtschaftskriminellen stolz machen würde. Wahrscheinlich werden Sie von einem Konzern oder einer Verbrecherfamilie gesucht, um ihnen bei ihren Geschäften zu helfen.",
-                    "Stat": "INT"
+                    "Stat": "INT",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -244,7 +250,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Sprache",
                     "Description_EN": "Skill of speaking a particular language. You must choose a specific language whenever you increase this Skill. At a Base 10, you can speak the language well enough to get by on the street but you don't understand a lot of the slang. At a Base 14, you are a fluent speaker of the language and most people assume you grew up speaking the language. At a Base 18, you not only speak the language fluently but you know all the ins and outs of the language including slang, complicated situational rules, and all dialects of the language.",
                     "Description_DE": "Fertigkeit, eine bestimmte Sprache zu sprechen. Du musst eine bestimmte Sprache wählen, wenn du diese Fertigkeit erhöhst. Mit Basis 10 kannst du die Sprache gut genug sprechen, um dich auf der Straße zurechtzufinden, aber du verstehst nicht viel von der Umgangssprache. Mit Basis 14 sprichst du die Sprache fließend und die meisten Leute gehen davon aus, dass du mit dieser Sprache aufgewachsen bist. Mit Base 18 sprechen Sie die Sprache nicht nur fließend, sondern kennen auch alle Einzelheiten der Sprache, einschließlich der Umgangssprache, komplizierter situationsbezogener Regeln und aller Dialekte der Sprache.",
-                    "Stat": "INT"
+                    "Stat": "INT",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -260,7 +267,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Lokaler Experte",
                     "Description_EN": "Skill of knowing a specific area well and knowing the agendas of its various factions, both political and criminal. You must choose a specific location whenever you increase this Skill, which cannot be any larger than a single neighborhood or community. At a Base 10, you know the area pretty well; where to go to get whatever you need, where to avoid, what the local public factions are like. At a Base 14, you are well acquainted with the area and not only do you know the basics but you are aware of the underlying problems, factions, and rules that the average tourist isn't. At a Base 18, you could act as a tour guide for the area. You've poked your nose in everywhere, talked to most of the people, seen the sights, and experienced most of what the area has to offer. You are almost never at a loss for info.",
                     "Description_DE": "Die Fähigkeit, ein bestimmtes Gebiet gut zu kennen und die Pläne der verschiedenen politischen und kriminellen Gruppierungen zu kennen. Wenn du diese Fertigkeit erhöhst, musst du einen bestimmten Ort wählen, der nicht größer als ein einzelnes Stadtviertel oder eine Gemeinde sein darf. Mit Basis 10 kennst du die Gegend ziemlich gut; wo du alles bekommst, was du brauchst, wo du dich nicht aufhalten solltest und wie die örtlichen öffentlichen Parteien sind. Auf einem Stützpunkt 14 sind Sie mit der Gegend gut vertraut und kennen nicht nur die Grundlagen, sondern wissen auch über die zugrunde liegenden Probleme, Gruppierungen und Regeln Bescheid, was der durchschnittliche Tourist nicht weiß. Auf einem Stützpunkt 18 könnten Sie als Fremdenführer für das Gebiet fungieren. Sie haben Ihre Nase überall reingesteckt, mit den meisten Leuten gesprochen, die Sehenswürdigkeiten gesehen und das meiste erlebt, was die Gegend zu bieten hat. Sie sind fast nie um eine Information verlegen.",
-                    "Stat": "INT"
+                    "Stat": "INT",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -282,7 +290,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Schlägerei",
                     "Description_EN": "Skill at fighting and grappling with brute strength. At a Base 10, you're a pretty good bar brawler and you can hold your own in a fist fight. You know how to throw a punch and some of the intricacies of wrestling. At a Base 14, you could be a professional fighter in any number of pit-fighting arenas or official venues around the City. You can lay out most opponents and while you don't have a lot of finesse you know how to use your strength to your advantage. At a Base 18, you are a seasoned fighter with an iron grip and a mean right hook. All it takes is one good punch or perfectly executed grapple for most people to think twice about fighting you.",
                     "Description_DE": "Geschicklichkeit im Kämpfen und Greifen mit roher Kraft. Mit einem Basiswert von 10 bist du ein ziemlich guter Kneipenschläger und kannst dich in einem Faustkampf behaupten. Du weißt, wie man einen Schlag ausführt und kennst einige der Feinheiten des Ringens. Mit Basis 14 könntest du ein professioneller Kämpfer in einer beliebigen Anzahl von Boxkampfarenen oder offiziellen Veranstaltungsorten in der Stadt sein. Du kannst die meisten Gegner außer Gefecht setzen und weißt, wie du deine Stärke zu deinem Vorteil nutzen kannst, auch wenn du nicht viel Finesse hast. Mit einem Basiswert von 18 bist du ein erfahrener Kämpfer mit einem eisernen Griff und einem fiesen rechten Haken. Es braucht nur einen guten Schlag oder einen perfekt ausgeführten Griff, damit die meisten Leute es sich zweimal überlegen, ob sie gegen dich kämpfen.",
-                    "Stat": "DEX"
+                    "Stat": "DEX",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -290,7 +299,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Ausweichen",
                     "Description_EN": "Skill for getting out of the way of someone attacking you in melee. A Character with REF 8 or higher can also use this Skill to dodge Ranged Attacks and Explosions. At a Base 10, you're fast on your feet and when in need you can usually get out of the way. At a Base 14, you're quick enough to dodge most gangers and you can even hold your own against skilled combatants armed with monokatanas and monofilament whips. At a Base 18, you've trained your body to start moving before your brain even responds to what's happening around you.",
                     "Description_DE": "Fähigkeit, um einem Nahkampfangriff aus dem Weg zu gehen. Ein Charakter mit REF 8 oder höher kann diese Fähigkeit auch nutzen, um Fernkampfangriffen und Explosionen auszuweichen. Mit einem Basiswert von 10 bist du schnell auf den Beinen und kannst in der Regel ausweichen, wenn es nötig ist. Mit einem Basiswert von 14 bist du schnell genug, um den meisten Gangs auszuweichen, und kannst dich sogar gegen erfahrene Kämpfer behaupten, die mit Monokatanas und Monofilamentpeitschen bewaffnet sind. Mit Base 18 hast du deinen Körper so trainiert, dass du dich schon bewegst, bevor dein Gehirn überhaupt auf das reagiert, was um dich herum passiert.",
-                    "Stat": "DEX"
+                    "Stat": "DEX",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 2,
@@ -388,7 +398,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Konversation",
                     "Description_EN": "Skill of extracting information from people without alerting them through careful conversation. At a Base 10, you are a smooth talker who can coerce their subject into telling them simple information. At a Base 14, you would make an excellent interviewer, convincing subjects to tell you anecdotes about the past, pontificate about favorite interests and philosophies, etc. At a Base 18, you have the skill to gently maneuver a person into telling you everything, including extremely personal information, like how they have an illegitimate son and the fact that no one ever truly loved them.",
                     "Description_DE": "Die Fähigkeit, durch vorsichtige Konversation Informationen aus Menschen herauszuholen, ohne sie zu alarmieren. Bei einem Basiswert von 10 sind Sie ein gewandter Redner, der seine Gesprächspartner dazu zwingen kann, ihm einfache Informationen zu geben. Mit Basis 14 sind Sie ein hervorragender Interviewer, der seine Gesprächspartner dazu bringt, ihm Anekdoten aus der Vergangenheit zu erzählen, über Lieblingsinteressen und -philosophien zu schwadronieren usw. Auf Stufe 18 haben Sie die Fähigkeit, eine Person sanft dazu zu bringen, Ihnen alles zu erzählen, auch sehr persönliche Informationen, z. B. dass sie einen unehelichen Sohn hat und dass niemand sie jemals wirklich geliebt hat.",
-                    "Stat": "EMP"
+                    "Stat": "EMP",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -396,7 +407,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Menschliche Wahrnehmung",
                     "Description_EN": "Skill of reading a person's facial expressions and body language to discern their emotional state and detect lies or deception. At a Base 10, you can usually tell when you're not getting the whole truth and you're adept at reading people's emotions. At a Base 14, you can detect subtle evasions and mood swings with ease, and you've learned the tells of most of your companions. At a Base 18, you can not only detect subtle emotional clues, but if a person is hiding something, you can usually tell what they're hiding in a general sense.",
                     "Description_DE": "Die Fähigkeit, den Gesichtsausdruck und die Körpersprache einer Person zu lesen, um ihren emotionalen Zustand zu erkennen und Lügen oder Täuschungen aufzudecken. Auf Basis 10 erkennst du in der Regel, wenn du nicht die ganze Wahrheit erfährst, und bist geschickt darin, die Emotionen von Menschen zu lesen. Auf Basis 14 erkennst du mit Leichtigkeit subtile Ausflüchte und Stimmungsschwankungen, und du kennst die meisten deiner Begleiter. Mit einem Basiswert von 18 kannst du nicht nur subtile emotionale Hinweise erkennen, sondern auch, wenn eine Person etwas verbirgt, kannst du in der Regel sagen, was sie im Allgemeinen verbirgt.",
-                    "Stat": "EMP"
+                    "Stat": "EMP",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -412,7 +424,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Überredung",
                     "Description_EN": "Skill of convincing, persuading, or influencing individuals. Also, the ability to talk others into doing what you want. This may be used individually or on large groups. At a Base 10, you can win most debates or convince your mainline that the blonde you were with was your sister. At a Base 14, you are a smooth talker of professional caliber. If you want to start a career in politics in the City this is where that dream can start becoming a reality. At a Base 18, you are truly gifted with a silver tongue and you have the skill to convince almost anyone of just about anything, if it's not too insane.",
                     "Description_DE": "Die Fähigkeit, Menschen zu überzeugen, zu überreden oder zu beeinflussen. Auch die Fähigkeit, andere zu überreden, das zu tun, was man will. Diese Fähigkeit kann einzeln oder in großen Gruppen eingesetzt werden. Mit einem Basiswert von 10 können Sie die meisten Debatten gewinnen oder Ihre Hauptleitung davon überzeugen, dass die Blondine, mit der Sie zusammen waren, Ihre Schwester ist. Mit einem Basiswert von 14 sind Sie ein geschmeidiger Redner von professionellem Format. Wenn Sie in der Stadt eine Karriere in der Politik anstreben, ist das der Punkt, an dem dieser Traum Wirklichkeit werden kann. Mit einem Basiswert von 18 sind Sie wahrlich begabt mit einer silbernen Zunge und haben die Fähigkeit, fast jeden von allem zu überzeugen, wenn es nicht zu verrückt ist.",
-                    "Stat": "COOL"
+                    "Stat": "COOL",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,
@@ -498,7 +511,8 @@ export function getAllSkills(): SkillCategory[] {
                     "Name_DE": "Erste Hilfe",
                     "Description_EN": "Skill of applying medical treatments to a wounded person to keep them from dying, and treating the most common Critical Injuries. At a Base 10, you have basic first-aid training and know how to handle injuries in the field. When someone calls for a doctor in an emergency, you're not the best choice but you can get the job done. At a Base 14, you can take care of all simple wounds and keep people from dying. You probably carry a Medtech bag with you just in case. At a Base 18, you are a miracle worker with a medkit. As long as you're on your feet, death is going to have to wait.",
                     "Description_DE": "Fähigkeit, eine verwundete Person medizinisch zu versorgen, um sie vor dem Tod zu bewahren, und die häufigsten kritischen Verletzungen zu behandeln. Mit einem Basislevel von 10 hast du eine grundlegende Erste-Hilfe-Ausbildung und weißt, wie du Verletzungen vor Ort behandeln kannst. Wenn jemand in einem Notfall nach einem Arzt ruft, bist du nicht die beste Wahl, aber du kannst die Arbeit erledigen. In einem Stützpunkt 14 kannst du alle einfachen Wunden versorgen und verhindern, dass Menschen sterben. Wahrscheinlich trägst du für den Fall der Fälle eine Medtech-Tasche bei dir. Auf einer Basis 18 bist du ein Wundertäter mit einem Medkit. Solange du auf den Beinen bist, wird der Tod warten müssen.",
-                    "Stat": "TECH"
+                    "Stat": "TECH",
+                    "Minimum": 2
                 },
                 {
                     "CostFactor": 1,

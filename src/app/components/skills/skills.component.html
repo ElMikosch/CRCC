@@ -14,7 +14,8 @@
                                 {{skill.Name_EN}} / {{skill.Name_DE}}
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <app-skill-input style="padding: 15px" [skill]="skill">
+                        <app-skill-input style="padding: 15px" [skill]="skill"
+                            [allSkillMaximumReached]="maximumReached">
                         </app-skill-input>
                         <div style="margin-bottom: 10px;">{{skill.Description_EN}}</div>
                         <div>{{skill.Description_DE}}</div>
@@ -26,7 +27,7 @@
 </mat-accordion>
 
 
-<!-- <div class="status-footer">
+<div class="status-footer">
     <div>Used Points: {{spendPoints}}</div>
     <div>Remaining Points: {{remainingPoints}}</div>
-</div> -->
+</div>

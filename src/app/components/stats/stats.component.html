@@ -8,7 +8,7 @@
             </mat-expansion-panel-header>
             <div style="margin-bottom: 10px;">{{stat.description}}</div>
             <div>{{stat.description_DE}}</div>
-            <app-stat-input style="padding: 15px" [stat]="stat">
+            <app-stat-input style="padding: 15px" [stat]="stat" [allStatMaximumReached]="maximumReached">
             </app-stat-input>
         </mat-expansion-panel>
     </div>

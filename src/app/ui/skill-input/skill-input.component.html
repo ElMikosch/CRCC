@@ -1,11 +1,11 @@
 <div class="stat-input-container">
-    <button mat-mini-fab color="primary" (click)="subtract()">
+    <button mat-mini-fab color="primary" (click)="subtract()" [disabled]="minimumReached">
         <mat-icon>remove</mat-icon>
     </button>
     <div class="stat-input-value">
         {{currentValue}}
     </div>
-    <button mat-mini-fab color="primary" (click)="add()">
+    <button mat-mini-fab color="primary" (click)="add()" [disabled]="maximumReached || allSkillMaximumReached">
         <mat-icon>add</mat-icon>
     </button>
 </div>
