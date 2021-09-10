@@ -1,4 +1,6 @@
-# Crcc
+# CRCC
+
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ElMikosch/CRCC.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ElMikosch/CRCC/context:javascript)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
