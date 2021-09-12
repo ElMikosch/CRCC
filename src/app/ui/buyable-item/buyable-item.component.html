@@ -1,0 +1,21 @@
+<div class="item-container">
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                Pistol | 100 EB
+            </mat-expansion-panel-header>
+            Pistol ja very good and so. Damage: 3D6
+            <div class="skill-input-container">
+                <button mat-mini-fab color="primary" (click)="subtract()" [disabled]="minimumReached">
+                    <mat-icon>remove</mat-icon>
+                </button>
+                <div class="skill-input-value">
+                    {{currentValue}}
+                </div>
+                <button mat-mini-fab color="primary" (click)="add()" [disabled]="maximumReached">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

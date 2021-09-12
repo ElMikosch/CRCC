@@ -12,7 +12,7 @@ export class StatsComponent implements OnInit {
 
   private maximumPoints: number = 62;
 
-  allStats: Stat[];
+  allStats: Stat[];     
   remainingPoints: number = 0;
   spendPoints: number = 0;
   maximumReached: boolean = false;

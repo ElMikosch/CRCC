@@ -13,12 +13,12 @@ export class RoleComponent implements OnInit {
   roles: Role[] = getAllRoles();
   characterName: string = '';
 
-  characterNameFormContol = new FormControl('Deine Mam');
+  characterNameFormContol = new FormControl('');
   selectedRoleFormControl!: FormControl;
 
   selectedRole!: Role;
 
-  constructor(private playerData: PlayerDataService) {}
+  constructor(private playerData: PlayerDataService) { }
 
   ngOnInit(): void {
     this.selectedRole = this.roles[0];

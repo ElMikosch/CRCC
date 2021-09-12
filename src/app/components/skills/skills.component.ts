@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { getAllSkills, Skill, SkillCategory } from 'src/app/models/skill';
+import { getAllSkills } from 'src/app/data/skills';
+import { Skill, SkillCategory } from 'src/app/models/skill';
 import { PlayerDataService } from 'src/app/services/player-data.service';
 
 @Component({
@@ -22,7 +23,7 @@ export class SkillsComponent implements OnInit {
     this.playerData.skills$.next(this.skillCategories);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   getStatValueForSkill(skill: Skill): Observable<number> {
     return this.playerData.stats$.pipe(
