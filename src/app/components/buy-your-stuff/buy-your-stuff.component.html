@@ -1,42 +1,45 @@
 <mat-accordion>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            Melee Weapons
-        </mat-expansion-panel-header>
-        <table mat-table [dataSource]="meleeWeapons" class="mat-elevation-z8">
-            <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> Name </th>
-                <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
-            </ng-container>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Melee Weapons
+    </mat-expansion-panel-header>
+    <app-melee-weapons-table></app-melee-weapons-table>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Ranged Weapons
+    </mat-expansion-panel-header>
+    <app-ranged-weapons-table></app-ranged-weapons-table>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Ammunition
+    </mat-expansion-panel-header>
+    <app-ammunition-table></app-ammunition-table>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Armor
+    </mat-expansion-panel-header>
+    <app-armor-table></app-armor-table>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Gear
+    </mat-expansion-panel-header>
+    <app-gear-table></app-gear-table>
+  </mat-expansion-panel>
 
-            <ng-container matColumnDef="examples">
-                <th mat-header-cell *matHeaderCellDef> Examples </th>
-                <td mat-cell *matCellDef="let element"> {{element.Examples}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="numberOfHands">
-                <th mat-header-cell *matHeaderCellDef> Number of hands </th>
-                <td mat-cell *matCellDef="let element"> {{element.NumberOfHandsRequired}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="damage">
-                <th mat-header-cell *matHeaderCellDef> Damage </th>
-                <td mat-cell *matCellDef="let element"> {{element.Damage}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="rateOfFire">
-                <th mat-header-cell *matHeaderCellDef> RateOfFire </th>
-                <td mat-cell *matCellDef="let element"> {{element.RateOfFire}} </td>
-            </ng-container>
-
-
-            <ng-container matColumnDef="cost">
-                <th mat-header-cell *matHeaderCellDef> Cost </th>
-                <td mat-cell *matCellDef="let element"> {{element.CostDescription}} </td>
-            </ng-container>
-
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-        </table>
-    </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Cyberware
+    </mat-expansion-panel-header>
+    <app-cyberware-table></app-cyberware-table>
+  </mat-expansion-panel>
 </mat-accordion>
+
+
+<div class="status-footer">
+  <div>Remaining Humanity: {{humanity$ | async}}</div>
+  <div>Remaining Budget: {{budget$|async}}eb</div>
+</div>

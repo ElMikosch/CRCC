@@ -15,14 +15,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { AppComponent } from './app.component';
+import { AmmunitionTableComponent } from './components/amunition-table/ammunition-table.component';
+import { ArmorTableComponent } from './components/armor-table/armor-table.component';
 import { BuyYourStuffComponent } from './components/buy-your-stuff/buy-your-stuff.component';
+import { GearTableComponent } from './components/gear-table/gear-table.component';
 import { LifePathComponent } from './components/life-path/life-path.component';
+import { MeleeWeaponsTableComponent } from './components/melee-weapons-table/melee-weapons-table.component';
+import { RangedWeaponsTableComponent } from './components/ranged-weapons-table/ranged-weapons-table.component';
 import { RoleComponent } from './components/role/role.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { BuyableItemComponent } from './ui/buyable-item/buyable-item.component';
 import { SkillInputComponent } from './ui/skill-input/skill-input.component';
 import { StatInputComponent } from './ui/stat-input/stat-input.component';
+import { CyberwareTableComponent } from './components/cyberware-table/cyberware-table.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +41,12 @@ import { StatInputComponent } from './ui/stat-input/stat-input.component';
     SkillsComponent,
     BuyableItemComponent,
     BuyYourStuffComponent,
+    MeleeWeaponsTableComponent,
+    RangedWeaponsTableComponent,
+    ArmorTableComponent,
+    GearTableComponent,
+    AmmunitionTableComponent,
+    CyberwareTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,9 +65,9 @@ import { StatInputComponent } from './ui/stat-input/stat-input.component';
     MatExpansionModule,
     MatTabsModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

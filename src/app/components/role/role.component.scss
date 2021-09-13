@@ -1,3 +1,7 @@
+.container {
+  margin: 10px;
+}
+
 .pdf-container {
   margin-top: 50px;
 }
@@ -6,8 +10,8 @@
   height: 100px !important;
 }
 
-@media only screen and (min-width: 1100px){
-  .container{
+@media only screen and (min-width: 1100px) {
+  .container {
     height: 100%;
     display: grid;
     grid-template-columns: 20% 80%;
