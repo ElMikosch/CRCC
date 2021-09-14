@@ -155,7 +155,7 @@ export function getAllStats(): Stat[] {
         var avgStat = Math.ceil((stat1 + stat2) / 2);
         return 10 + 5 * avgStat;
       },
-      value: 0,
+      value: 20,
       minValue: 2,
       maxValue: 8,
     },
@@ -169,7 +169,7 @@ export function getAllStats(): Stat[] {
         'Menschlichkeit ist ein Maß dafür, wie gut man mit der Welt und anderen Menschen in ihr interagiert. Menschen mit sehr niedrigen Menschlichkeits-Statistiken haben viele Probleme im zwischenmenschlichen Bereich. Sie können soziopathisch, zurückgezogen, distanziert oder sogar gemeingefährlich werden. Wenn der HUM-Wert deines Charakters unter Null fällt, bedeutet das den Tod des Gefühlslebens deines Charakters; er rutscht in einen Zustand, der Cyberpsychose genannt wird und in dem abnorme Eigenschaften wie Mordlust oder mentale Distanzierung auftreten können.',
       isDerived: true,
       derivedCalculation: (stat1: number, stat2: number) => stat1 * 10,
-      value: 0,
+      value: 20,
       minValue: 2,
       maxValue: 8,
     },

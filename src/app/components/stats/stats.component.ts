@@ -18,15 +18,14 @@ export class StatsComponent implements OnInit {
 
   constructor(private playerData: PlayerDataService) {
     this.allStats = getAllStats();
-    this.calculateDerivedStats(this.allStats);
     this.playerData.stats$.subscribe(this.calculatePoints.bind(this));
-    this.playerData.stats$.subscribe((x) => console.log(x));
     this.playerData.stats$.next(this.allStats);
   }
 
   ngOnInit(): void {}
 
   calculatePoints(stats: Stat[]) {
+    console.log(stats);
     this.spendPoints = stats
       .filter((x) => !x.isDerived)
       .map((x) => x.value)

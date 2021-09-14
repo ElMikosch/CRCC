@@ -18,6 +18,10 @@ export class StatInputComponent implements OnInit {
 
   ngOnInit(): void {
     this.stat.value = this.stat.minValue;
+
+    setTimeout(() => {
+      this.updatePlayerData();
+    }, 1000);
   }
 
   add() {
