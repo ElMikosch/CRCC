@@ -28,8 +28,9 @@ export class RoleComponent implements OnInit {
       this.playerData.name$.next(x)
     );
 
-    this.selectedRoleFormControl.valueChanges.subscribe((x) => console.log(x));
+    this.selectedRoleFormControl.valueChanges.subscribe((x) => this.playerData.role$.next(x));
 
     this.playerData.name$.subscribe((x) => console.log(x));
+    this.playerData.role$.subscribe((x) => console.log(x));
   }
 }

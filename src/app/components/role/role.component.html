@@ -2,25 +2,20 @@
   <p style="grid-row: 1; grid-column: 1;">
     <mat-form-field appearance="outline">
       <mat-label>Character Name</mat-label>
-      <input style="color: white"
-             matInput
-             [formControl]="characterNameFormContol">
+      <input style="color: white" matInput [formControl]="characterNameFormContol">
     </mat-form-field>
   </p>
   <p style="grid-row: 2; grid-column: 1;">
     <mat-form-field appearance="outline">
       <mat-label>Role</mat-label>
       <mat-select [formControl]="selectedRoleFormControl">
-        <mat-option *ngFor="let role of roles"
-                    [value]="role">{{role.name}}</mat-option>
+        <mat-option *ngFor="let role of roles" [value]="role">{{role.name}}</mat-option>
       </mat-select>
       <mat-hint>{{selectedRole.description}}</mat-hint>
     </mat-form-field>
   </p>
-  <div class="pdf-container"
-       style="grid-row: 1 / span 2; grid-column: 2;">
-    <ngx-extended-pdf-viewer [src]="selectedRoleFormControl.value.roleInfoFile"
-                             [useBrowserLocale]="true"
-                             height="75vh"></ngx-extended-pdf-viewer>
+  <div class="pdf-container" style="grid-row: 1 / span 2; grid-column: 2;">
+    <ngx-extended-pdf-viewer [src]="selectedRoleFormControl.value.roleInfoFile" [useBrowserLocale]="true" height="75vh">
+    </ngx-extended-pdf-viewer>
   </div>
 </div>
