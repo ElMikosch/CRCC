@@ -4,6 +4,30 @@ on:
       - main
 name: Build Project
 jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up secret file
+      env:
+        host: ${{ secrets.HOST }}
+        remote: ${{ secrets.DIR }}
+        port: ${{ secrets.PORT }}
+        user: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSHKEY }}
+      run: |
+        echo $host >> secrets.txt
+        echo $remote >> secrets.txt
+        echo $port >> secrets.txt
+        echo $user >> secrets.txt
+        echo $key >> secrets.txt
+    - name: Run tmate
+      uses: mxschmitt/action-tmate@v2
+
   build:
     runs-on: ubuntu-latest
     strategy:
